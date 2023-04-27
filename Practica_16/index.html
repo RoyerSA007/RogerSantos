@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dr. Nombre del Médico - Especialidad</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: #444;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        nav a:hover {
+            color: #bfbfbf;
+        }
+        .hero {
+            background-image: url('https://cdn.pixabay.com/photo/2015/07/31/14/29/surgeon-869205_1280.jpg');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 60px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 24px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .registro {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .registro label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            width: 100%;
+            color: #444;
+        }
+        .registro input[type="text"],
+        .registro input[type="email"],
+        .registro input[type="date"],
+        .registro input[type="time"],
+    .registro select,
+    .registro textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #e5e5e5;
+        border-radius: 5px;
+        font-size: 18px;
+        color: #444;
+        margin-bottom: 20px;
+    }
+    .registro input[type="text"]:focus,
+    .registro input[type="email"]:focus,
+    .registro input[type="date"]:focus,
+    .registro input[type="time"]:focus,
+    .registro select:focus,
+    .registro textarea:focus {
+        outline: none;
+        border: 2px solid #6e8bb6;
+        box-shadow: 0 0 5px rgba(110, 139, 182, 0.5);
+    }
+    .registro input[type="submit"] {
+        border: none;
+        border-radius: 5px;
+        background-color: #6e8bb6;
+        color: #fff;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+    .registro input[type="submit"]:hover {
+        background-color: #4a6c8a;
+    }
+    footer {
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+    }
+</style>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">Dr. Nombre del Médico</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mí</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div>
+            <h1>Dr. Nombre del Médico</h1>
+            <p>Especialista en Especialidad</p>
+        </div>
+    </section>
+    <div class="container">
+        <section id="registro-paciente">
+            <h2>Registro de pacientes</h2>
+            <form class="registro" action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="text" id="edad" name="edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <textarea id="direccion" name="direccion" required></textarea>
+                </div>
+                <input type="submit" value="Registrar">
+            </form>
+        </section>
+        <section id="historial">
+            <h2>Historial médico</h2>
+            <p>En construcción</p>
+        </section>
+        <section id="gestion-citas">
+            <h2>Gestión de citas</h2>
+            <form class="registro" action="#" method="post">
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+                </div>
+                <div class="form-group">
+                    <label for="motivo">Motivo de la cita:</label>
+                    <textarea id="motivo" name="motivo" required></textarea>
+                </div>
+                <input type="submit" value="Reservar cita">
+            </form>
+        </section>
+        <section id="registro-pagos">
+            <h2>Registro de pagos</h2>
+            <p>En construcción</p>
+        </section>
+    </div>
+    <footer>
+        <p>Derechos de autor © Año - Dr. Nombre del Médico</p>
+    </footer>
+</body>
+</html>    
