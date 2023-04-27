@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Practica 11</title>
+        <title>JS</title>
         <style>
             h1 {
                 /* este es un comentario */
@@ -23,15 +23,19 @@
         <script>
             var titulo;
             titulo = document.getElementById("titulo");
-            titulo.innerHTML = "Partido Mundial :)";
+            titulo.innerHTML = "Feliz regreso a clases :)";
+            // CTRL + K + C
             var texto = document.getElementById("texto");
             texto.style.fontSize = "50px";
-            texto.innerHTML = "Marcador, Brazil 2(4) vs Mexico 0";
+            texto.innerHTML = "Marcador, Real Madrid 2(4) vs Chelsea 0";
             var colores;
             colores = document.getElementById("colores");
             colores.style.display = "none";
+            //colores.style.display = "block";
 
+            //camel case
             function cambiarColor(){
+                //alert('Hola JS');
                 console.log('Hola Developer');
             }
             cambiarColor();
@@ -68,7 +72,9 @@
             console.log(sinValor);
 
             let auto = "BMW";
+            //let auto;
             console.log(auto);
+            //Let Hoisting
 
             let variableLocal = 10;
             {
@@ -82,6 +88,7 @@
             const autos = ["VW","Chevrolet","BMW",,,50,"6"];
             console.log(autos[0] + autos[1]);
             console.log(autos.length);
+            //Objeto JS 
             let autoNuevo = {
                 tipo : "Toyota", 
                 modelo : 500, 
@@ -97,6 +104,9 @@
             console.log(edad);
 
             let edadSamuel = 25;
+            //let edadSamuel;
+
+            //Let Hoisting
 
             var x1 = 4.5;
             console.log(typeof x1);
@@ -131,6 +141,7 @@
             {
                 console.log('Falso');
             }
+            //Operador ternario
             edadEmilio > 18 ? console.log('Verdadero') : console.log('Falso');
 
             console.log(8 * null);
