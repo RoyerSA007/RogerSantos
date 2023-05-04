@@ -5,7 +5,7 @@
     <script src="https://apis.google.com/js/api.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <title>DocDesk</title>
   <link rel="icon" href="">
 
@@ -96,7 +96,8 @@
       background-color: #2671d2;
       color: #fff;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 15px;
+      margin-left: 20px;
     }
 
     .paciente-list li a:hover {
@@ -111,6 +112,17 @@
     h1 img {
       max-width: 200px;
       height: auto;
+    }
+
+    .registro-paciente {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 10px;
     }
 
   </style>
@@ -128,16 +140,20 @@
     <a href="#paciente" class="header-link">Paciente</a>
   </header>
 
-  <ul class="paciente-list">
+  <ul class="paciente-list" style="list-style-type: none;">
+    <button class="registro-paciente">
+      <i class="fas fa-user-plus"></i> Registrar nuevo paciente
+    </button>
     <li>
-      <a href="Pacientes/Paciete1.html">Paciente 1</a>
+      <a href="Pacientes/Paciente1.html">Paciente 1</a>
     </li>
     <li>
       <a href="Pacientes/Paciente2.html">Paciente 2</a>
     </li>
     <li>
-    <a href="Pacientes/Paciente3.html">Paciente 3</a>
+      <a href="Pacientes/Paciente3.html">Paciente 3</a>
     </li>
+  </ul>
     
       </ul>
       <main>
@@ -155,9 +171,12 @@
             Proveedor Medicina
           </a>
         </div>
+
         <div class="help-button">
-            <a href="#ayuda">Ayuda</a>
+            <a href="Ayuda/Ayuda.html">Ayuda</a>
           </div>
+
+
             </main>
             <script>
               const headerLinks = document.querySelectorAll('.header-link');
