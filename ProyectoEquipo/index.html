@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoKit</title>
+
+    <style>
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px;
+            background-color: #f2f2f2;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #f2f2f2;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        .menu li:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>
+            <a href="#">Inicio</a>
+        </li>
+        <li>
+            <a href="#">Productos</a><i class="motorcycle"></i>
+            <ul class="submenu">
+                <li><a href="#">Hero</a></li>
+                <li><a href="#">Italika</a></li>
+            </ul>
+        </li>
+        <li>
+            
+            <a href="#">Sucursales</a>
+            <ul class="submenu">
+                <li><a href="#">Sucursal 1</a></li>
+                <li><a href="#">Sucursal 2</a></li>
+                <li><a href="#">Sucursal 3</a></li>
+                <li><a href="#">Sucursal 4</a></li>
+                <li><a href="#">Sucursal 5</a></li>
+                <li><a href="#">Sucursal 6</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Contacto</a>
+        </li>
+    </ul>
+</body>
+</html>
