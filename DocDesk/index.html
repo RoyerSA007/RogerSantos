@@ -11,7 +11,7 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Overpass';
     }
 
     .help-button {
@@ -32,7 +32,7 @@
     }
 
     .help-button a:hover {
-      background-color: #2671d2;
+      background-color: #609cea;
     }
 
     .header {
@@ -53,7 +53,7 @@
     }
 
     .header a:hover {
-      background-color: #2671d2;
+      background-color: #70a5eb;
     }
 
     .button-container {
@@ -61,12 +61,22 @@
       justify-content: center;
     }
 
-    .proveedor-buttons,
+    .proveedor-buttons,    
     .paciente-list {
       display: none;
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    .proveedor-buttons .button {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.5s;
+  }
+
+    .proveedor-buttons .button:hover {
+    transform: scale(1.1);
+  }
 
     .button {
       display: flex;
@@ -80,11 +90,12 @@
 
     .button img {
       display: block;
-      width: 120px;
-      height: 120px;
-      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      margin: 10px auto;
       margin-bottom: 10px;
     }
+    
 
     .paciente-list li {
       margin-bottom: 10px;
@@ -115,14 +126,51 @@
     }
 
     .registro-paciente {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      margin: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+  }
+
+  .registro-paciente:hover {
+    background-color: #4CAF50;
+  }
+
+  #btnRegistrar {
+    background-color: #4CAF50;
+  }
+
+  .galeria 
+    { 
+        display: flex; 
+        height: 20rem; 
+        gap: 1rem 
+    } 
+ 
+    .galeria > div     { 
+        flex: 1; 
+        border-radius: 1rem; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: auto; 
+        transition: all .4s cubic-bezier(.25, .8, .45, 1.4);
+    } 
+ 
+    .galeria > div:hover { 
+        flex: 3; 
+    } 
+
+    img{
+          width: 500px;
+          height: auto;
+          margin: auto;
+        align-items:center;
     }
 
   </style>
@@ -141,9 +189,14 @@
   </header>
 
   <ul class="paciente-list" style="list-style-type: none;">
-    <button class="registro-paciente">
-      <i class="fas fa-user-plus"></i> Registrar nuevo paciente
-    </button>
+    
+    <li>
+      <a href="Registro/REGISTRO.html" class="registro-paciente" id="btnRegistrar">
+        <i class="fas fa-user-plus" ></i> Registrar nuevo paciente
+      </a>
+    </li>
+
+    
     <li>
       <a href="Pacientes/Paciente1.html">Paciente 1</a>
     </li>
@@ -157,11 +210,14 @@
     
       </ul>
       <main>
+        
         <div class="proveedor-buttons">
+          
           <a href="Provedores/Estudio.html" class="button">
             <img src="Imagenes/descarga.jpg" alt="Imagen 1">
             Proveedor Estudios
           </a>
+        
           <a href="Provedores/Maquinaria.html" class="button">
             <img src="Imagenes/OIP (1).jpg" alt="Imagen 2">
             Proveedor Maquinaria
@@ -176,7 +232,7 @@
             <a href="Ayuda/Ayuda.html">Ayuda</a>
           </div>
 
-
+<img src="Imagenes/Construccion.jpg" alt="">
             </main>
             <script>
               const headerLinks = document.querySelectorAll('.header-link');
