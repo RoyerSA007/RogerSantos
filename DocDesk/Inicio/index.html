@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>DocDesk</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <link rel="icon" href="">
+  <style>
+    body {
+      font-family: 'Overpass';
+    }
+
+    .help-button {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      background-color: #f5f5f5;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .help-button a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .help-button a:hover {
+      background-color: #609cea;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #f5f5f5;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .header a:hover {
+      background-color: #70a5eb;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .proveedor-buttons,
+    .paciente-list {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .proveedor-buttons .button {
+      display: inline-block;
+      position: relative;
+      transition: transform 0.5s;
+    }
+
+    .proveedor-buttons .button:hover {
+      transform: scale(1.1);
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+    }
+
+
+    .button i {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .button span {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    
+    .button img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      margin: 10px auto;
+      margin-bottom: 10px;
+    }
+
+    .paciente-list li {
+      margin-bottom: 10px;
+    }
+
+    .paciente-list li a {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #2671d2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 15px;
+      margin-left: 20px;
+    }
+
+    .paciente-list li a:hover {
+      background-color: #185699;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    h1 img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .registro-paciente {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .registro-paciente:hover {
+      background-color: #4CAF50;
+    }
+
+    #btnRegistrar {
+      background-color: #4CAF50;
+    }
+
+    .galeria {
+      display: flex;
+      height: 20rem;
+      gap: 1rem;
+    }
+
+    .galeria > div {
+      flex: 1;
+      border-radius: 1rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+      transition: all .4s cubic-bezier(.25, .8, .45, 1.4);
+    }
+
+    .galeria > div:hover {
+      flex: 3;
+    }
+
+    img {
+      width: 500px;
+      height: auto;
+      margin: auto;
+      align-items: center;
+    }
+
+    .hamburger-container {
+      display: flex;
+      justify-content: flex-start; /* Cambiado */
+      padding: 10px;
+      position: relative;
+      z-index: 9999;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    .hamburger .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      margin: 2px 0;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .hamburger.active .bar:first-child {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:last-child {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .content {
+      display: none;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .content.active {
+      display: block;
+    }
+    
+    
+    .h3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background: #f0f0f0;
+}
+
+.h3-container h3 {
+  font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.h3-container img {
+    max-width: 200px;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }    
+
+    </style>
+</head>
+
+<body>
+  <h1>
+    <img src="Imagenes/DocDesk, corta.png" alt="" style="max-width: 200px; height: auto;">
+  </h1>
+
+  <header class="header">
+    <a href="#proveedor" onclick="toggleMenu('proveedor')" class="header-link">Proveedor</a>
+    <a href="#agenda" onclick="toggleMenu('agenda')">-</a>
+    <a href="#paciente" onclick="toggleMenu('paciente')" class="header-link">Paciente</a>
+  </header>
+
+  <div class="paciente-list" style="list-style-type: none; display: none;" id="paciente-menu">
+    <div class="hamburger-container">
+      <div class="hamburger" onclick="toggleHamburger(this)">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <div class="content">
+      <li>
+        <a href="../Pacientes/Paciente1.html">Paciente 1</a>
+      </li>
+      <li>
+        <a href="../Pacientes/Paciente2.html">Paciente 2</a>
+      </li>
+      <li>
+        <a href="../Pacientes/Paciente3.html">Paciente 3</a>
+      </li>
+    </div>
+
+    <li>
+      <a href="../Registro/REGISTRO.html" class="registro-paciente" id="btnRegistrar">
+        <i class="fas fa-user-plus"></i> Registrar nuevo paciente
+      </a>
+    </li>
+    <li>
+      <a href="../Pacientes/Paciente1.html">Paciente 1</a>
+    </li>
+    <li>
+      <a href="../Pacientes/Paciente2.html">Paciente 2</a>
+    </li>
+    <li>
+      <a href="../Pacientes/Paciente3.html">Paciente 3</a>
+    </li>
+  </div>
+
+  <main>
+    <div class="proveedor-buttons" style="display: none;" id="proveedor-menu">
+      <a href="../Provedores/Estudio.html" class="button">
+        <img src="Imagenes/descarga.jpg" alt="Imagen 1">
+        Proveedor Estudios
+      </a>
+      <a href="../Provedores/Maquinaria.html" class="button">
+        <img src="Imagenes/OIP (1).jpg" alt="Imagen 2">
+        Proveedor Maquinaria
+      </a>
+      <a href="../Provedores/Medicamento.html" class="button">
+        <img src="Imagenes/OIP.jpg" alt="Imagen 3">
+        Proveedor Medicina
+      </a>
+      <a href="../Provedores/Estudio.html" class="button">
+        <img src="Imagenes/Diagnosticos.jpg" alt="Imagen 4">
+        Proveedor Estudios
+      </a>
+      <a href="../Provedores/Maquinaria.html" class="button">
+        <img src="https://www.promedco.com/images/Noticias_2022/nuewa-i9-1.png" alt="Imagen 5">
+        Proveedor Maquinaria
+      </a>
+      <a href="../Provedores/Medicamento.html" class="button">
+        <img src="Imagenes/Farmacias.jpg" alt="Imagen 3">
+        Proveedor Medicina
+      </a>
+    </div>
+
+    <div class="help-button">
+      <a href="../Ayuda/Ayuda.html">Ayuda</a>
+    </div>
+  </main>
+
+  <div class="h4-container">
+<h3>
+Doc Desk es una página web diseñada para ayudar a los doctores a encontrar información de sus pacientes de manera eficiente y acceder a una base de datos completa de medicamentos disponibles. Además, la plataforma también ofrece un contacto directo con los proveedores de maquinaria médica necesaria para los tratamientos de los pacientes.
+</h3>
+<img src="data:image/jpeg;base64,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" alt="Imagen 1">
+</div>
+
+
+<div class="h4-container">
+<h3>
+La interfaz de Doc Desk está diseñada para ser altamente interactiva, lo que facilita la tarea del doctor al buscar y organizar la información relevante de sus pacientes. El sistema de búsqueda permite a los médicos acceder rápidamente a los datos necesarios, como historias clínicas, resultados de pruebas, diagnósticos anteriores y cualquier otro detalle médico importante.
+</h3>
+<img src="data:image/jpeg;base64,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" alt="Imagen 2">
+</div>
+
+
+<div class="h4-container">
+<h3>
+La base de datos de medicamentos de Doc Desk es completa y actualizada regularmente, lo que permite a los médicos encontrar rápidamente información sobre dosis, efectos secundarios y posibles interacciones con otros medicamentos. Además, la plataforma ofrece la posibilidad de realizar pedidos directos a los proveedores de maquinaria médica, agilizando el proceso de adquisición y garantizando que los médicos tengan acceso a las últimas tecnologías y equipos necesarios para sus pacientes.
+</h3>
+<img src="https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/2023-02/chat-gpt.jpg.webp?itok=sm8LZA4s" alt="Imagen 3">
+</div>
+
+
+<div class="h4-container">
+<h3>
+En resumen, Doc Desk es una página web que ofrece una solución integral para los doctores al proporcionar una interfaz interactiva y fácil de usar que les ayuda a acceder rápidamente a la información de sus pacientes, consultar una amplia base de datos de medicamentos y establecer contacto con proveedores de maquinaria médica, todo en una misma plataforma. Esto permite a los médicos optimizar su tiempo y mejorar la calidad de atención médica que brindan a sus pacientes.
+</h3>
+<img src="https://previews.123rf.com/images/terovesalainen/terovesalainen1802/terovesalainen180200591/95743228-doctor-usando-laptop-y-sistema-de-registro-m%C3%A9dico-electr%C3%B3nico-emr-base-de-datos-digital-de-la.jpg" alt="Imagen 4">
+</div>
+
+
+  <script>
+    function toggleHamburger(hamburger) {
+      hamburger.classList.toggle('active');
+      document.querySelector('.content').classList.toggle('active');
+    }
+
+    function toggleMenu(menu) {
+      const pacienteMenu = document.getElementById('paciente-menu');
+      const proveedorMenu = document.getElementById('proveedor-menu');
+      switch (menu) {
+        case 'paciente':
+          pacienteMenu.style.display = 'block';
+          proveedorMenu.style.display = 'none';
+          document.querySelector('.hamburger-container').style.display = 'flex';
+          break;
+        case 'proveedor':
+          pacienteMenu.style.display = 'none';
+          proveedorMenu.style.display = 'block';
+          document.querySelector('.hamburger-container').style.display = 'none';
+          break;
+        default:
+          pacienteMenu.style.display = 'none';
+          proveedorMenu.style.display = 'none';
+          document.querySelector('.hamburger-container').style.display = 'none';
+          break;
+      }
+    }
+  </script>
+
+
+<script>
+  // Función para desplazar los botones de proveedores hacia la izquierda
+  function animateLeft() {
+    $('.button-container').animate({
+      left: '-100%'
+    }, 500, function () {
+      $('.button-container').hide();
+      $('.proveedor-buttons').show().css('left', '100%').animate({
+        left: '0'
+      }, 500);
+    });
+  }
+
+  // Función para mostrar los botones de proveedores
+  function showButtons() {
+    $('.button-container').show().css('left', '100%').animate({
+      left: '0'
+    }, 500, function () {
+      $('.proveedor-buttons').hide();
+    });
+  }
+
+  // Evento de clic en el enlace de proveedores
+  $('#proveedor').on('click', function () {
+    animateLeft();
+  });
+
+  // Evento de clic en el enlace de paciente
+  $('#paciente').on('click', function () {
+    showButtons();
+  });
+</script>
+
+</body>
+
+</html>
