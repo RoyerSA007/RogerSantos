@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+    }
+    
+    .background-image {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWwM5Ol0c1wFYr7duzzzFGN-sTWCU5VGtHr-V_6cE1zoliE5NvWA3NgTD8aorMWWmLM28&usqp=CAU');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.6; /* Puedes ajustar la opacidad para que se vea menos transparente */
+        z-index: -1;
+    }
+    
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        margin-top: 30px;
+    }
+    
+    .menu-items {
+        background-color: rgba(255, 255, 255, 0.8); /* Color blanco semi-transparente */
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    
+    .menu-item {
+        margin-bottom: 20px;
+    }
+    
+    .menu-item h2 {
+        margin: 0;
+    }
+    
+    .menu-item p {
+        margin: 5px 0;
+    }
+
+    .menu-item {
+    margin-bottom: 20px;
+    }
+    .price {
+        font-weight: bold;
+        color: #555;
+    }
+
+    #back-to-menu {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f2f2f2;
+        color: #333;    
+        padding: 10px;
+        border-radius: 50%;
+        width: 60px; 
+        height: 60px; 
+        display: flex;
+    }
+    #back-to-menu i {
+        display: block;
+        margin: auto; 
+    }
+    #back-to-menu:hover {
+        background-color: #ddd;
+    }
+</style>
+
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="content">
+        <h1>Jarras</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h2>Limonada</h2>
+                <p>Jarra de 2L</p>
+                <p class="price">$10.99</p>
+            </div>
+            <div class="menu-item">
+                <h2>Naranjada</h2>
+                <p>Jarra de 2L</p>
+                <p class="price">$10.99</p>
+            </div>            
+        </div>
+
+        <h1>Refrecos</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h2>Coca-cola</h2>
+                <p>Pollo empanizado con queso derretido y una porcion de espaguetti</p>
+                <p class="price">$10.99</p>
+            </div>
+            <div class="menu-item">
+                <h2>Tuna Tarta</h2>
+                <p>Trozo de atun cellado, preparado con la receta especial de la casa</p>
+                <p class="price">$10.99</p>
+            </div>            
+        </div>
+
+        <h1>Vinos</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h2>Enasalada Cesar</h2>
+                <p>Es una ensalanda con aderezo cesar, lechuga jitomate y pepino</p>
+                <p class="price">$10.99</p>
+            </div>
+            <div class="menu-item">
+                <h2>Ensalada Mangia</h2>
+                <p>Ensalada con aderezo especial de la casa, con lechuga, jitomate, crotones</p>
+                <p class="price">$10.99</p>
+            </div>            
+        </div>
+
+        <h1>Cervezas</h1>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h2>Pollo Parmesano</h2>
+                <p>Pollo empanizado con queso derretido y una porcion de espaguetti</p>
+                <p class="price">$10.99</p>
+            </div>
+            <div class="menu-item">
+                <h2>Tuna Tarta</h2>
+                <p>Trozo de atun cellado, preparado con la receta especial de la casa</p>
+                <p class="price">$10.99</p>
+            </div>            
+        </div>
+
+        <a id="back-to-menu" href="index.html">
+            <i class="fas fa-home" style="color: rgb(0, 0, 0); font-size: 36px;"></i>
+        </a>
+    </div>
+</body>
+</html>
+
+
