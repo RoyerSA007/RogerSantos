@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Devil May Cry 5</title>
+
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+        }
+
+        header {
+            background-image: url("Imagenes/header-background.jpg");
+            background-size: cover;
+            color: #FFD700; /* Color dorado */
+            text-align: center;
+            padding: 100px 10px;
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            background-color: #222;
+            padding: 15px 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #FFD700;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #66CCFF; /* Color azul claro */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        main {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #333;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #66CCFF;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .logo img {
+            width: 100%; /* Ajustar la imagen al ancho del contenedor */
+            max-width: 700px; /* Limitar el tamaño máximo de la imagen */
+            display: block;
+            margin: 0 auto;
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Imagenes/DMC5.3.jpg" alt="Logo">
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+            <li><a href="#jugabilidad" onclick="mostrarSeccion('jugabilidad')">Jugabilidad</a></li>
+            <li><a href="#historia" onclick="mostrarSeccion('historia')">Historia</a></li>
+            <li><a href="#personajes" onclick="mostrarSeccion('personajes')">Personajes</a></li>
+            <li><a href="#habilidadesymejoras" onclick="mostrarSeccion('habilidadesymejoras')">Habilidades y Mejoras</a></li>
+            <li><a href="#secretos" onclick="mostrarSeccion('secretos')">Secretos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio">
+            <h1>Inicio</h1>
+            <p>
+                "Devil May Cry 5" es un videojuego de acción hack and slash desarrollado y publicado por Capcom. Es la quinta entrega principal de la serie de juegos "Devil May Cry". La serie se caracteriza por su estilo de juego frenético y estilizado, así como por su énfasis en el combate elegante y las acrobacias en medio de enfrentamientos con hordas de enemigos y desafiantes jefes.
+            </p>
+            <p>
+                En "Devil May Cry 5", los jugadores asumen el control de varios personajes, incluidos Nero, Dante y un nuevo personaje llamado V, a medida que luchan contra demonios y criaturas sobrenaturales en una ciudad infestada de peligros. El juego se destaca por su acción fluida y su sistema de combos, que permite a los jugadores realizar movimientos impresionantes y variados al enfrentarse a enemigos.
+            </p>
+            <p>
+                La trama de "Devil May Cry 5" sigue a estos personajes mientras se unen para enfrentar una amenaza demoníaca que se cierne sobre la ciudad. A lo largo del juego, los jugadores desentrañan secretos, descubren conexiones entre los personajes y luchan contra enemigos cada vez más poderosos.  
+            </p>
+        </section>
+        <section id="jugabilidad" class="hidden">
+            <h1>Jugabilidad</h1>
+            <p>"Devil May Cry 5" es un juego de acción hack and slash desarrollado y publicado por Capcom. La jugabilidad se centra en el combate frenético y estilizado, donde los jugadores controlan a varios personajes mientras luchan contra hordas de enemigos y jefes desafiantes. El sistema de combate se basa en combos fluidos y variados, con énfasis en la combinación de ataques cuerpo a cuerpo y a distancia. Los jugadores pueden cambiar entre diferentes armas y estilos de juego para adaptarse a diferentes situaciones.</p>
+        </section>
+        <section id="historia" class="hidden">
+            <h1>Historia</h1>
+            <p>
+                La historia de "Devil May Cry 5" sigue a varios personajes, incluidos Nero, Dante y un nuevo personaje llamado V. La trama se desarrolla después de los eventos de "Devil May Cry 4" y gira en torno a la invasión de demonios en la ciudad de Red Grave. Nero y su compañero Nico se unen para enfrentar esta amenaza, mientras que Dante también se involucra en la lucha. V, un misterioso individuo con habilidades únicas, también juega un papel crucial en la trama. A medida que los personajes se unen para enfrentar a un poderoso demonio conocido como Urizen, se desentrañan secretos del pasado y se revelan conexiones entre los personajes.
+            </p>
+        </section>
+        <section id="personajes" class="hidden">
+            <h1>Personajes</h1>
+            <p>
+                <li>Nero: Un cazademonios con un brazo demoníaco llamado "Devil Breaker" que le otorga diversas habilidades. Es un protagonista central en la historia.</li>
+                <li>Dante: El icónico cazademonios que utiliza una variedad de armas y estilos de combate. Es uno de los personajes más poderosos y reconocibles de la serie.</li>
+                <li>V: Un nuevo personaje que controla a tres criaturas (Shadow, Griffon y Nightmare) para luchar en su lugar. Tiene un estilo de juego único.</li>
+                <li>Nico: Una ingeniera que proporciona a Nero sus Devil Breakers y ofrece apoyo técnico.</li>
+                <li>Urizen: El principal antagonista, un demonio poderoso y misterioso con planes oscuros.</li>
+            </p>
+        </section>
+        <section id="habilidadesymejoras" class="hidden">
+            <h1>Habilidades y Mejoras</h1>
+            <p>
+                A lo largo del juego, los personajes ganan habilidades y mejoras mediante el uso de puntos de experiencia o fragmentos de almas. Estas mejoras pueden afectar las capacidades de combate, la salud, la resistencia y más. Los Devil Breakers de Nero también pueden ser intercambiados y mejorados para potenciar sus habilidades en el combate.
+            </p>
+        </section>
+        <section id="secretos" class="hidden">
+            <h1>Secretos</h1>
+            <p>
+                "Devil May Cry 5" tiene varios secretos y desafíos opcionales, como misiones secundarias, salas de desafío, coleccionables y más. Estos elementos adicionales ofrecen a los jugadores la oportunidad de explorar y profundizar aún más en el juego.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        function mostrarSeccion(seccion) {
+            var secciones = ["inicio", "jugabilidad", "historia", "personajes", "habilidadesymejoras", "secretos"];
+
+            for (var i = 0; i < secciones.length; i++) {
+                var elemento = document.getElementById(secciones[i]);
+                if (secciones[i] === seccion) {
+                    elemento.style.display = "block";
+                } else {
+                    elemento.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
